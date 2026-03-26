@@ -75,57 +75,27 @@
     <img src="https://i.ibb.co/pmhH444/Mi-otra-imagen-lol.jpg">
     <h3>Festive launcher</h3>
     <p>$50 (antes $66)</p>
-    <button onclick="comprar(50)">Comprar</button>
+    <button onclick="verProducto('producto1.html')">Ver</button>
   </div>
 
   <div class="card">
     <img src="https://i.ibb.co/4ZntDLkF/mi-imagen.png">
     <h3>dream up shoes</h3>
     <p>$30 (antes $40)</p>
-    <button onclick="comprar(30)">Comprar</button>
+    <button onclick="verProducto('producto2.html')">Ver</button>
   </div>
 
   <div class="card">
     <img src="https://i.ibb.co/zVWHmwyR/mi-otra-otra-imagen-lol.png">
     <h3>Dream up shirt</h3>
     <p>$15 (antes $27)</p>
-    <button onclick="comprar(15)">Comprar</button>
-  </div>
-</div>
-
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <h2>Pago</h2>
-    <p>Total: $<span id="total"></span></p>
-
-    <input placeholder="Nombre">
-    <input placeholder="Correo">
-    <input placeholder="País">
-    <input placeholder="Número de tarjeta">
-
-    <button onclick="pagar()">Pagar</button>
-    <button onclick="cerrar()">Cancelar</button>
+    <button onclick="verProducto('producto3.html')">Ver</button>
   </div>
 </div>
 
 <script>
-  let precioActual = 0;
-
-  function comprar(precio) {
-    precioActual = precio;
-    document.getElementById('total').innerText = precio;
-    document.getElementById('modal').style.display = 'flex';
-  }
-
-  function cerrar() {
-    document.getElementById('modal').style.display = 'none';
-  }
-
-  function pagar() {
-    cerrar();
-    setTimeout(() => {
-      alert('Compra exitosa ✅');
-    }, 100);
+  function verProducto(archivo) {
+    window.location.href = archivo;
   }
 </script>
 
